@@ -1,0 +1,53 @@
+
+.nav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10 10 10 0;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: #0000; 
+  }
+
+.navbar-brand{
+  padding-left: 1.2em;
+  text-decoration: none;
+  color:white;
+
+}
+  
+.bg-dark{
+  background-color: black;
+}
+
+  .nav-ul li {
+    float: left;
+  }
+  
+  .nav-ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ 
+  @media only screen and (min-width: 768px) {
+    .nav-ul li {
+      display: inline-block;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+    .nav-ul li {
+      display: block;
+      width: 100%; 
+      box-sizing: border-box; 
+    }
+  
+    .nav-ul li a {
+      text-align: left; 
+    }
+  }
+  
