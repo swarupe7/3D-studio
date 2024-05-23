@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/models');
+        const response = await axios.get('https://threed-studio.onrender.com/models');
         setModels(response.data);
         console.log(models);
       } catch (error) {
@@ -39,7 +39,7 @@ function App() {
     formData.append('name', file.name);
 
     try {
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('https://threed-studio.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -73,7 +73,7 @@ function App() {
 
 {models.map((model, index) => (
           <div key={model._id} className={`dataCard ${index % 2 === 0 ? 'leftCard' : 'rightCard'}`}>
-            <GLBViewer url={`http://localhost:5000/models/${model._id}`} />
+            <GLBViewer url={`https://threed-studio.onrender.com/models/${model._id}`} />
           </div>
         ))}
 
